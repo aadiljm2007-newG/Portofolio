@@ -194,8 +194,19 @@ nextBtn.addEventListener('click', () => {
     updateProject(currentIndex);
 });
 
+// Preload Images for smoother performance
+function preloadProjectImages() {
+    projects.forEach(project => {
+        if (project.image && !project.image.startsWith('https://images.unsplash.com')) {
+            const img = new Image();
+            img.src = project.image;
+        }
+    });
+}
+
 // Initial load
 updateProject(0);
+preloadProjectImages();
 
 // Contact Form Handling
 const contactForm = document.getElementById('contact-form');
