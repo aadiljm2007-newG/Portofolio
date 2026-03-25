@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadil JM | Portfolio</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app" class="theme-lexicomp">
+        <!-- Background Watermark -->
+        <div class="watermark-container">
+            <h1 class="watermark">AADIL_JM</h1>
+        </div>
+
+        <!-- Main Split Container -->
+        <main class="split-container">
+            <!-- Left Panel (Content) -->
+            <section class="panel-left">
+                <div class="content-wrapper">
+                    <header class="brand">
+                        <span class="tag">PORTFOLIO</span>
+                    </header>
+
+                    <div id="project-details" class="project-details">
+                        <h2 id="project-title" class="animate-text">LEXICOMP RETRO</h2>
+                        <p id="project-description" class="animate-text">A RAG-based, AI lawyer assistant currently in
+                            development. Revolutionizing legal research with AI precision.</p>
+
+                        <div id="project-info" class="project-info animate-text">
+                            <div class="info-item">
+                                <span class="label">STATUS</span>
+                                <span id="project-status" class="value">BEING WORKED ON</span>
+                            </div>
+                            <div id="tech-stack-container" class="info-item">
+                                <span class="label">TECH</span>
+                                <span class="value">AI / RAG / PYTHON</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- About Me Section -->
+                    <div id="about-section" class="about-section initially-hidden">
+                        <h2 class="section-title">ABOUT ME</h2>
+                        <div class="about-grid">
+                            <div class="about-text">
+                                <p>I am a passionate <strong>Computer Science & Design</strong> student at SNS College
+                                    of Technology, graduating in 2029.</p>
+                                <p>I am an <strong>aspiring UI/UX and a Full Stack Developer</strong>. Passionate about
+                                    building new and challenging applications and integrating AI into them. Broad minded
+                                    and adventurous, yet simple and humble.</p>
+                                <p>I believe in "Vibe Coding" — blending technical excellence with creative design.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <footer class="controls">
+                        <button id="prev-btn" class="nav-btn">PREV</button>
+                        <div class="pagination">
+                            <span class="current">01</span>
+                            <span class="total">/ 06</span>
+                        </div>
+                        <button id="next-btn" class="nav-btn">NEXT</button>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- Right Panel (Visual) -->
+            <section class="panel-right">
+                <div class="character-wrapper">
+                    <img id="project-image" src="" alt="Project Visual" class="character-img">
+                    <div id="education-visuals" class="education-visuals initially-hidden">
+                        <div class="edu-card top">
+                            <img src="assets/hilton.png" alt="Hilton School">
+                            <span class="edu-label">SC SCHOOL</span>
+                        </div>
+                        <div class="edu-card bottom">
+                            <img src="assets/sns.jpg" alt="SNS College">
+                            <span class="edu-label">UG COLLEGE</span>
+                        </div>
+                    </div>
+                    <div id="skills-visuals" class="skills-visuals initially-hidden">
+                        <div class="skills-category">
+                            <h3>SOFT SKILLS</h3>
+                            <ul>
+                                <li>Communicative</li>
+                                <li>Broadminded Visionary</li>
+                                <li>Team Player</li>
+                                <li>Leadership skills</li>
+                                <li>Hybrid Worker</li>
+                                <li>Consistent</li>
+                                <li>Perfectionist</li>
+                                <li>Critical problem solving</li>
+                                <li>Creative minded</li>
+                                <li>Flexible Working methods</li>
+                            </ul>
+                        </div>
+                        <div class="skills-category">
+                            <h3>TECHNICAL SKILLS</h3>
+                            <ul>
+                                <li>Basics in Python & Java</li>
+                                <li>Prompt Engineering</li>
+                                <li>Versatility with AI tools</li>
+                                <li>Full stack Developer</li>
+                                <li>Vibe Coding</li>
+                                <li>UI/UX Development</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Me Section -->
+                <div id="contact-section" class="contact-section initially-hidden">
+                    <h2 class="section-title white">GET IN TOUCH</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label>NAME</label>
+                            <input type="text" name="name" id="form-name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label>EMAIL</label>
+                            <input type="email" name="email" id="form-email" placeholder="aadiljm2007@gmail.com"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label>MESSAGE</label>
+                            <textarea name="message" id="form-message" placeholder="Tell me about your project..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" id="submit-btn" class="submit-btn">SEND MESSAGE</button>
+                    </form>
+                    <div id="form-success" class="form-success initially-hidden">
+                        <h3 class="success-title">MESSAGE SENT!</h3>
+                        <p>Thank you, Aadil will get back to you soon.</p>
+                        <button onclick="resetForm()" class="submit-btn">SEND ANOTHER</button>
+                    </div>
+                    <div class="contact-links">
+                        <div class="contact-item">
+                            <span class="contact-label">PHONE</span>
+                            <a href="https://wa.me/916385293920" target="_blank" rel="noopener">6385293920</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">EMAIL</span>
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=aadiljm2007@gmail.com"
+                                target="_blank" rel="noopener">aadiljm2007@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-label">LINKEDIN</span>
+                            <a href="https://www.linkedin.com/in/aadil-jm-726481383" target="_blank"
+                                rel="noopener">AADIL JM</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="src/main.js"></script>
+</body>
+
+</html>
