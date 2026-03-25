@@ -732,13 +732,15 @@ body {
 
 @media screen and (max-width: 768px) {
     body {
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
         height: auto;
     }
 
     #app {
         height: auto;
         min-height: 100vh;
+        background-color: var(--bg-white);
     }
 
     .split-container {
@@ -748,17 +750,20 @@ body {
 
     .panel-left {
         width: 100%;
-        min-height: 60vh;
-        padding: 60px 40px;
-        order: 2;
-        display: flex;
-        flex-direction: column;
+        min-height: auto;
+        padding: 80px 30px 40px 30px;
+        order: 1;
+        /* Content on TOP for mobile */
+        background-color: var(--bg-white) !important;
+        display: block;
     }
 
     .panel-right {
         width: 100%;
-        height: 50vh;
-        order: 1;
+        height: 40vh;
+        /* Shorter visual on mobile */
+        order: 2;
+        /* Visual below text */
         clip-path: none;
     }
 
@@ -766,74 +771,80 @@ body {
         display: none;
     }
 
+    .brand {
+        margin-bottom: 2rem;
+    }
+
     .project-details h2 {
-        font-size: 2.8rem;
-        margin-bottom: 1.5rem;
+        font-size: 2.2rem;
+        word-wrap: break-word;
+        margin-bottom: 1rem;
+    }
+
+    .project-description {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
+        max-width: 100%;
     }
 
     .controls {
-        position: fixed;
+        position: sticky;
         bottom: 0;
         left: 0;
         width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        -webkit-backdrop-filter: blur(15px);
-        backdrop-filter: blur(15px);
-        padding: 20px;
+        background: rgba(255, 255, 255, 0.98);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        padding: 15px 10px;
         justify-content: center;
-        gap: 30px;
+        gap: 20px;
         z-index: 1000;
-        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-btn {
+        font-size: 0.8rem;
     }
 
     .character-img {
-        height: 90%;
-        width: auto;
-        max-width: 90%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover !important;
     }
 
     .skills-visuals {
         flex-direction: column;
-        gap: 3rem;
+        gap: 2rem;
         width: 100%;
+        padding: 20px 0;
     }
 
     .education-visuals {
-        padding: 10% 8%;
+        padding: 5%;
+        height: 500px;
     }
 
     .edu-card {
         transform: none !important;
         width: 100%;
+        height: 200px;
     }
 
     .contact-links {
+        display: flex;
         flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    /* Fixed full panel images on mobile too */
-    .theme-intro img,
-    .theme-lexicomp img,
-    .theme-drpet img {
-        height: 100% !important;
-        width: 100% !important;
-        object-fit: cover !important;
+        gap: 1.2rem;
     }
 }
 
 @media screen and (max-width: 480px) {
     .panel-left {
-        padding: 40px 25px;
+        padding: 60px 20px 40px 20px;
     }
 
     .project-details h2 {
-        font-size: 2.2rem;
-    }
-
-    .info-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
+        font-size: 1.8rem;
     }
 }
