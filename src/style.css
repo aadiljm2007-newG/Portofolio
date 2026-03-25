@@ -718,3 +718,122 @@ body {
 .initially-hidden {
     display: none;
 }
+
+/* Mobile Responsive Layout */
+@media screen and (max-width: 1024px) {
+    .panel-left {
+        padding: 5% 5% 5% 8%;
+    }
+
+    .project-details h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow: auto;
+        height: auto;
+    }
+
+    #app {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .split-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .panel-left {
+        width: 100%;
+        min-height: 60vh;
+        padding: 60px 40px;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .panel-right {
+        width: 100%;
+        height: 50vh;
+        order: 1;
+        clip-path: none;
+    }
+
+    .watermark-container {
+        display: none;
+    }
+
+    .project-details h2 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .controls {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        -webkit-backdrop-filter: blur(15px);
+        backdrop-filter: blur(15px);
+        padding: 20px;
+        justify-content: center;
+        gap: 30px;
+        z-index: 1000;
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .character-img {
+        height: 90%;
+        width: auto;
+        max-width: 90%;
+    }
+
+    .skills-visuals {
+        flex-direction: column;
+        gap: 3rem;
+        width: 100%;
+    }
+
+    .education-visuals {
+        padding: 10% 8%;
+    }
+
+    .edu-card {
+        transform: none !important;
+        width: 100%;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    /* Fixed full panel images on mobile too */
+    .theme-intro img,
+    .theme-lexicomp img,
+    .theme-drpet img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .panel-left {
+        padding: 40px 25px;
+    }
+
+    .project-details h2 {
+        font-size: 2.2rem;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
