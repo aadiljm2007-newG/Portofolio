@@ -9,6 +9,16 @@ const projects = [
         theme: 'theme-intro'
     },
     {
+        id: 'godhand',
+        title: 'GODHAND',
+        description: 'A futuristic, touchless interface where users control a physics-accurate liquid simulation and their entire OS using only hand gestures. Built with MediaPipe, a custom WebGL Navier-Stokes fluid solver, and a Python Win32 bridge for sub-pixel precise control.',
+        status: 'COMPLETED / ACTIVE',
+        tech: 'CV / WEBGL / PYTHON / GLSL',
+        image: 'assets/godhand.png',
+        theme: 'theme-godhand',
+        link: 'https://godhand.vercel.app/'
+    },
+    {
         id: 'lexicomp',
         title: 'LEXICOMP RETRO',
         description: 'A RAG-based AI lawyer assistant. Facilitating intelligent legal research and document processing with precision.',
@@ -92,6 +102,8 @@ const contactSection = document.getElementById('contact-section');
 const characterWrapper = document.querySelector('.character-wrapper');
 const educationVisuals = document.getElementById('education-visuals');
 const skillsVisuals = document.getElementById('skills-visuals');
+const projectLink = document.getElementById('project-link');
+const linkItem = document.getElementById('link-item');
 
 function updateProject(index) {
     const project = projects[index];
@@ -101,6 +113,7 @@ function updateProject(index) {
     desc.classList.add('fade-out');
     status.parentElement.classList.add('fade-out');
     tech.parentElement.classList.add('fade-out');
+    linkItem.classList.add('fade-out');
     img.classList.add('img-exit');
 
     setTimeout(() => {
@@ -127,6 +140,13 @@ function updateProject(index) {
             status.textContent = project.status;
             tech.textContent = project.tech;
 
+            if (project.link) {
+                projectLink.href = project.link;
+                linkItem.style.display = 'block';
+            } else {
+                linkItem.style.display = 'none';
+            }
+
             if (project.id === 'education') {
                 img.style.display = 'none';
                 educationVisuals.style.display = 'flex';
@@ -150,6 +170,7 @@ function updateProject(index) {
             desc.classList.remove('fade-out');
             status.parentElement.classList.remove('fade-out');
             tech.parentElement.classList.remove('fade-out');
+            linkItem.classList.remove('fade-out');
             img.classList.remove('img-exit');
             educationVisuals.classList.remove('img-exit');
             skillsVisuals.classList.remove('img-exit');
@@ -158,6 +179,7 @@ function updateProject(index) {
             desc.classList.add('fade-in');
             status.parentElement.classList.add('fade-in');
             tech.parentElement.classList.add('fade-in');
+            linkItem.classList.add('fade-in');
 
             if (project.id === 'education') {
                 educationVisuals.classList.add('img-enter');
@@ -178,6 +200,7 @@ function updateProject(index) {
                 desc.classList.remove('fade-in');
                 status.parentElement.classList.remove('fade-in');
                 tech.parentElement.classList.remove('fade-in');
+                linkItem.classList.remove('fade-in');
                 img.classList.remove('img-enter');
             }
         }, 800);

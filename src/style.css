@@ -84,6 +84,19 @@ body {
 }
 
 /* Theme Variations */
+.theme-godhand {
+    --theme-color: #006666;
+}
+
+.theme-godhand .character-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transform: none;
+    filter: none;
+}
+
 .theme-lexicomp {
     --theme-color: #8B0000;
 }
@@ -354,6 +367,22 @@ body {
     font-size: 1.2rem;
     font-weight: 900;
     color: var(--text-main);
+}
+
+#project-link {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    border-bottom: 2px solid var(--theme-color);
+    padding-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    transition: all 0.3s var(--ease);
+}
+
+#project-link:hover {
+    letter-spacing: 0.1em;
+    opacity: 0.8;
 }
 
 /* Controls */
