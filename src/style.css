@@ -274,17 +274,17 @@ body {
 }
 
 .theme-intro {
-    --theme-color: #D32F2F;
-    /* Vibrant Red from photo bg */
+    --theme-color: #000000;
+    /* Pure black to match the portrait background */
 }
 
 .theme-intro .character-img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center top;
-    transform: none;
-    filter: none;
+    object-fit: contain;
+    object-position: center 15%;
+    transform: scale(1.4) translateY(18%);
+    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.4));
 }
 
 .theme-intro .character-wrapper {

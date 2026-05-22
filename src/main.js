@@ -5,7 +5,7 @@ const projects = [
         description: 'Portfolio of Aadil JM - Computer Science & Design Student | AI Researcher | Full Stack Developer | UI/UX Designer.',
         status: 'AVAILABLE',
         tech: 'VIBE CODING / AI / UI/UX',
-        image: 'assets/hero_me_new.jpg',
+        image: 'assets/hero_me_new.png',
         theme: 'theme-intro'
     },
     {
